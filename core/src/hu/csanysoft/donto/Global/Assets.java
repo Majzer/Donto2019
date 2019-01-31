@@ -40,6 +40,17 @@ public class Assets {
     public static final AssetDescriptor<Texture> EMPTY_TEXTURE
             = new AssetDescriptor<Texture>("zolipls.png", Texture.class);
 
+    public static final AssetDescriptor<Texture> START
+            = new AssetDescriptor<Texture>("start_red.png", Texture.class);
+
+    public static final AssetDescriptor<Texture> START_DOWN
+            = new AssetDescriptor<Texture>("start_down_red.png", Texture.class);
+
+    public static final AssetDescriptor<Texture> EXIT
+            = new AssetDescriptor<Texture>("exit_red.png", Texture.class);
+
+    public static final AssetDescriptor<Texture> EXIT_DOWN
+            = new AssetDescriptor<Texture>("exit_down_red.png", Texture.class);
 
 
     public static void prepare() {
@@ -56,6 +67,10 @@ public class Assets {
 
         manager.load(ARIAL_30_FONT);
         manager.load(EMPTY_TEXTURE);
+        manager.load(START);
+        manager.load(START_DOWN);
+        manager.load(EXIT);
+        manager.load(EXIT_DOWN);
     }
 
     public static void afterLoaded() {
