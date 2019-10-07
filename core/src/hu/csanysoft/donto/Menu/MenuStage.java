@@ -71,6 +71,19 @@ public class MenuStage extends MyStage {
             }
         };
 
+        OneSpriteStaticActor easterEgg = new OneSpriteStaticActor(Assets.manager.get(Assets.EMPTY_TEXTURE){
+            @Override
+            public void init(){
+                super.init();
+                addListener(new InputListener()){
+                    public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                        System.exit(0);
+                        return true;
+                    }
+                }
+            }
+        })
+
       /*  OneSpriteStaticActor tutorial = new OneSpriteStaticActor(Assets.manager.get(Assets.GAMEOVER_TEXTURE)){
             @Override
             public void init() {
@@ -96,8 +109,11 @@ public class MenuStage extends MyStage {
         addActor(start);
        // addActor(tutorial);
         addActor(exit);
+        addActor(easterEgg);
+        
 
         start.magnify(2);
+        easterEgg.magnify(100);
         //tutorial.magnify(2);
         exit.magnify(2);
        // spiral.magnify(2);
